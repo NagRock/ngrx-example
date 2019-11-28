@@ -1,0 +1,32 @@
+:host {
+  font-size: 20px;
+}
+
+.form {
+  margin-top: 15px;
+}
+
+.entity {
+  display: flex;
+}
+
+.removeButton {
+  margin-left: 10px;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.selectedInfo {
+  margin-top: 20px;
+  color: dimgray;
+  font-weight: bold;
+}
+
+.entityName {
+  cursor: pointer;
+}
+
+.selectedEntity {
+  background-color: darkcyan;
+}

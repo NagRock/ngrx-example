@@ -1,0 +1,17 @@
+Entities:
+<ul>
+    <li *ngFor="let entity of allEntities$ | async" class="entity">
+        <div (click)="selectEntity(entity)" class="entityName" [class.selectedEntity]="entity.id === (selectedEntity$ | async)?.id">
+            {{ entity.name }}
+        </div>
+        <div (click)="removeEntity(entity.id)" class="removeButton">X</div>
+    </li>
+</ul>
+
+<div class="form">
+    <input type="text" #entityName (keyup)="$event.keyCode === 13 ? addEntity(entityName.value) : false">
+    <button (click)="addEntity(entityName.value)">Add new</button>
+    <button (click)="addEntityWithDelay(entityName.value)">Add new with delay</button>
+</div>
+
+<div class="selectedInfo">Selected: {{ (selectedEntity$ | async)?.name }}</div>
